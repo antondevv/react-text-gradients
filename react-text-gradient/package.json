@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Anton Franzen",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "react": "^18.2.0"
+  }
 }
