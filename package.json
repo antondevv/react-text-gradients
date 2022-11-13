@@ -1,0 +1,11 @@
+{
+  "name": "react-text-gradient",
+  "version": "1.0.0",
+  "description": "Lightweight React component to make gradient texts fast as lighting",
+  "main": "index.js",
+  "author": "Anton Franzen",
+  "license": "MIT",
+  "devDependencies": {
+    "turbo": "^1.6.3"
+  }
+}
