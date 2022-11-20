@@ -13,8 +13,6 @@ export type GradientTextProps = React.ComponentPropsWithRef<"span"> & {
   linearGradient: Linear
 }
 
-const allowedNodes = ["h1", "h2", "h3", "h4", "h5", "h6", "p", "a"] as const
-
 export const GradientText = ({
   children,
   linearGradient,
@@ -25,18 +23,10 @@ export const GradientText = ({
   GradientTextProps,
   "linearGradient" | "radialGradient"
 >) => {
-  const ref = React.useRef<HTMLSpanElement>(null)
   const gradient = linearGradient || radialGradient
   if (!gradient) throw new Error("missing gradient")
+
   const gradientStyle = transformGradientToStyle(gradient)
-
-  const childrenT = children as React.ReactElement | undefined | null
-  const typeOfNode = childrenT && childrenT["type"] ? childrenT["type"] : null
-  if (!allowedNodes.includes(typeOfNode as typeof allowedNodes[number]))
-    throw new Error("Wrong type")
-
-  const TextNode = children as React.ReactNode
-  if (!TextNode || !typeOfNode) throw new Error("Wrong html element")
   const style = {
     background: fallbackColor,
     WebkitBackgroundClip: "text",
@@ -44,9 +34,9 @@ export const GradientText = ({
     ...gradientStyle,
   }
 
-  const { children: __, style: _, ...res } = childrenT?.props
-  const { style: styleProp } = childrenT?.props
-  const styles = { ...style, ...styleProp }
-  const props = { style: styles, ...res, ...rest, ref }
-  return React.createElement(typeOfNode, props, childrenT?.props?.children)
+  return (
+    <span style={style} {...rest}>
+      {children}
+    </span>
+  )
 }
