@@ -7,7 +7,6 @@ export type Radial = string[]
 
 export type GradientTextProps = React.ComponentPropsWithRef<"span"> & {
   children: React.ReactNode
-  compatebility?: { legacy: boolean }
   fallbackColor?: string
   radialGradient: Radial
   linearGradient: Linear
