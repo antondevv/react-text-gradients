@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
-  "types": "lib/index.d.ts",
+  "types": "lib/types/index.d.ts",
   "author": "Anton Franzen",
   "license": "MIT",
   "files": [
