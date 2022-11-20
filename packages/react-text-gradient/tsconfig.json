@@ -11,7 +11,7 @@
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
-    "declarationDir": "lib",
+    "declarationDir": "lib/types",
     "moduleResolution": "Node"
   },
   "exclude": ["node_modules", "lib", "rollup.config.js"]
