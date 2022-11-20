@@ -13,11 +13,12 @@
     "clean": "rimraf lib",
     "prebuild": "yarn clean",
     "build": "yarn build:esm && yarn build:cjs && yarn build:umd",
-    "build:umd": "rollup --config",
+    "build:umd": "rollup --config --bundleConfigAsCjs",
     "build:esm": "tsc --project tsconfig.esm.json",
     "build:cjs": "tsc --project tsconfig.cjs.json"
   },
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.1",
     "@types/node": "^18.7.23",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
