@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "target": "ES2018",
+    "noEmitOnError": true,
+    "lib": ["ES2015", "DOM"],
+    "strict": true,
+    "jsx": "react",
+    "sourceMap": true,
+    "esModuleInterop": false,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationDir": "lib",
+    "moduleResolution": "Node"
+  },
+  "exclude": ["node_modules", "lib", "rollup.config.js"]
+}
