@@ -1,16 +1,9 @@
 import { Directions } from "../helpers"
 
-export type GradientTypes = "linear" | "radial"
-export type Linear = [Directions, string[]]
-export type Radial = string[]
+export type LinearGradient = [Directions, string[]]
 export type SpanProps = React.ComponentPropsWithRef<"span">
 
-export type LinearGradientProps = SpanProps & {
+export type TextGradientProps = SpanProps & {
   fallbackColor?: string
-  gradient: Linear
-}
-
-export type RadialGradientProps = SpanProps & {
-  fallbackColor?: string
-  gradient: Radial
+  gradient: LinearGradient
 }

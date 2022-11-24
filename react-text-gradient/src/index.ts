@@ -1,2 +1,4 @@
-export { LinearGradient } from "./components"
-export { RadialGradient } from "./components"
+import { TextGradient } from "./components"
+
+export { TextGradient }
+export default TextGradient

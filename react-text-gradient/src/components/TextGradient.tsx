@@ -1,19 +1,18 @@
 import * as React from "react"
 import { toGradientStyle } from "../helpers"
-import { RadialGradientProps } from "../types"
+import { TextGradientProps } from "../types"
 import { Span } from "./Span"
 
-export const RadialGradient = ({
+export const TextGradient = ({
   children,
   gradient,
   fallbackColor,
   ...rest
-}: RadialGradientProps) => {
+}: TextGradientProps) => {
   if (!gradient) throw new Error("missing gradient")
-  const style = toGradientStyle(gradient, "radial", fallbackColor)
-
+  const style = toGradientStyle(gradient, fallbackColor)
   return (
-    <Span style={{ ...style, background: fallbackColor }} {...rest}>
+    <Span style={style} {...rest}>
       {children}
     </Span>
   )
