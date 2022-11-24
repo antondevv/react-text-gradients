@@ -10,7 +10,7 @@ export const RadialGradient = ({
   ...rest
 }: RadialGradientProps) => {
   if (!gradient) throw new Error("missing gradient")
-  const style = toGradientStyle(gradient, "radial")
+  const style = toGradientStyle(gradient, "radial", fallbackColor)
 
   return (
     <Span style={{ ...style, background: fallbackColor }} {...rest}>

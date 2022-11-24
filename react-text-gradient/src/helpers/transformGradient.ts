@@ -1,10 +1,4 @@
-import {
-  LinearGradientProps,
-  RadialGradientProps,
-  GradientTypes,
-  Linear,
-  Radial,
-} from "../types"
+import { GradientTypes, Linear, Radial } from "../types"
 
 const directions = [
   "to left",
@@ -24,15 +18,16 @@ const defaultStyles = {
   WebkitTextFillColor: "transparent",
 }
 
-export const toRadialStyle = (gradient: Radial) => {
+export const toRadialStyle = (gradient: Radial, fallbackColor?: string) => {
   const colors = gradient
   return {
     ...defaultStyles,
+    backgroundColor: fallbackColor,
     background: `radial-gradient(${colors})` as const,
   }
 }
 
-export const toLinearStyle = (gradient: Linear) => {
+export const toLinearStyle = (gradient: Linear, fallbackColor?: string) => {
   const [dir, colors] = gradient
 
   const direction = directions.includes(dir as any) ? dir : null
@@ -43,14 +38,18 @@ export const toLinearStyle = (gradient: Linear) => {
     )
   return {
     ...defaultStyles,
-    background: `linear-gradient(${direction}, ${colors})` as const,
+    backgroundColor: fallbackColor,
+    backgroundImage: `linear-gradient(${direction}, ${colors})` as const,
   }
 }
 
 export const toGradientStyle = (
   gradient: Linear | Radial,
-  gradientType: GradientTypes
+  gradientType: GradientTypes,
+  fallbackColor?: string
 ) => {
-  if (gradientType === "radial") return toRadialStyle(gradient as Radial)
-  if (gradientType === "linear") return toLinearStyle(gradient as Linear)
+  if (gradientType === "radial")
+    return toRadialStyle(gradient as Radial, fallbackColor)
+  if (gradientType === "linear")
+    return toLinearStyle(gradient as Linear, fallbackColor)
 }

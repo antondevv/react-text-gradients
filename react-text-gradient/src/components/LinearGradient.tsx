@@ -10,10 +10,10 @@ export const LinearGradient = ({
   ...rest
 }: LinearGradientProps) => {
   if (!gradient) throw new Error("missing gradient")
-  const style = toGradientStyle(gradient, "linear")
+  const style = toGradientStyle(gradient, "linear", fallbackColor)
 
   return (
-    <Span style={{ ...style, background: fallbackColor }} {...rest}>
+    <Span style={{ ...style }} {...rest}>
       {children}
     </Span>
   )
