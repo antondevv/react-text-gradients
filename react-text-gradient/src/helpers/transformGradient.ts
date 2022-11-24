@@ -40,4 +40,4 @@ export const toLinearStyle = (
 export const toGradientStyle = (
   gradient: LinearGradient,
   fallbackColor?: string
-) => toLinearStyle(gradient as LinearGradient, fallbackColor)
+) => toLinearStyle(gradient, fallbackColor)
