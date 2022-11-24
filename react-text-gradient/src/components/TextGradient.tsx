@@ -5,12 +5,12 @@ import { Span } from "./Span"
 
 export const TextGradient = ({
   children,
-  gradient,
+  linearGradient,
   fallbackColor,
   ...rest
 }: TextGradientProps) => {
-  if (!gradient) throw new Error("missing gradient")
-  const style = toGradientStyle(gradient, fallbackColor)
+  if (!linearGradient) throw new Error("missing gradient")
+  const style = toGradientStyle(linearGradient, fallbackColor)
   return (
     <Span style={style} {...rest}>
       {children}

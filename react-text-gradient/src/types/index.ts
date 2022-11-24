@@ -5,5 +5,5 @@ export type SpanProps = React.ComponentPropsWithRef<"span">
 
 export type TextGradientProps = SpanProps & {
   fallbackColor?: string
-  gradient: LinearGradient
+  linearGradient: LinearGradient
 }
