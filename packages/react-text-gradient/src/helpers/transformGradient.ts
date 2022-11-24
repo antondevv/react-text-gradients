@@ -1,4 +1,10 @@
-import { Linear, Radial } from "../GradientText"
+import {
+  LinearGradientProps,
+  RadialGradientProps,
+  GradientTypes,
+  Linear,
+  Radial,
+} from "../types"
 
 const directions = [
   "to left",
@@ -13,14 +19,20 @@ const directions = [
 
 export type Directions = typeof directions[number]
 
-const toRadialStyle = (gradient: Radial) => {
+const defaultStyles = {
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+}
+
+export const toRadialStyle = (gradient: RadialGradientProps["gradient"]) => {
   const colors = gradient
   return {
+    ...defaultStyles,
     background: `radial-gradient(${colors})` as const,
   }
 }
 
-const toLinearStyle = (gradient: Linear) => {
+export const toLinearStyle = (gradient: LinearGradientProps["gradient"]) => {
   const [dir, colors] = gradient
 
   const direction = directions.includes(dir as any) ? dir : null
@@ -30,17 +42,15 @@ const toLinearStyle = (gradient: Linear) => {
       `Expected gradient to be of type (linearGradient={["<direction>", [<color values>]]), got '${gradient}'`
     )
   return {
+    ...defaultStyles,
     background: `linear-gradient(${direction}, ${colors})` as const,
   }
 }
 
-const checkTypeOfGradient = (gradient: Radial | Linear) => {
-  const [, maybeArray] = gradient
-  return Array.isArray(maybeArray) ? "linear" : "radial"
-}
-
-export const transformGradientToStyle = (gradient: Radial | Linear) => {
-  const typeOfGradient = checkTypeOfGradient(gradient)
-  if (typeOfGradient === "radial") return toRadialStyle(gradient as Radial)
-  if (typeOfGradient === "linear") return toLinearStyle(gradient as Linear)
+export const toGradientStyle = (
+  gradient: Linear | Radial,
+  gradientType: GradientTypes
+) => {
+  if (gradientType === "radial") return toRadialStyle(gradient as Radial)
+  if (gradientType === "linear") return toLinearStyle(gradient as Linear)
 }
