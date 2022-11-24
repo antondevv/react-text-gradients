@@ -1,1 +1,2 @@
-export * from "./GradientText"
+export { LinearGradient } from "./components"
+export { RadialGradient } from "./components"
