@@ -14,5 +14,11 @@
     "declarationDir": "lib/types",
     "moduleResolution": "Node"
   },
-  "exclude": ["node_modules", "lib", "rollup.config.js"]
+  "exclude": [
+    "node_modules",
+    "lib",
+    "rollup.config.js",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx"
+  ]
 }
