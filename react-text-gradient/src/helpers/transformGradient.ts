@@ -24,7 +24,7 @@ const defaultStyles = {
   WebkitTextFillColor: "transparent",
 }
 
-export const toRadialStyle = (gradient: RadialGradientProps["gradient"]) => {
+export const toRadialStyle = (gradient: Radial) => {
   const colors = gradient
   return {
     ...defaultStyles,
@@ -32,7 +32,7 @@ export const toRadialStyle = (gradient: RadialGradientProps["gradient"]) => {
   }
 }
 
-export const toLinearStyle = (gradient: LinearGradientProps["gradient"]) => {
+export const toLinearStyle = (gradient: Linear) => {
   const [dir, colors] = gradient
 
   const direction = directions.includes(dir as any) ? dir : null
