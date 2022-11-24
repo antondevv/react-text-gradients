@@ -7,7 +7,7 @@
   "author": "Anton Franzen",
   "license": "MIT",
   "workspaces": [
-    "packages/*",
+    "react-text-gradient",
     "apps/*",
     "examples/*"
   ],
