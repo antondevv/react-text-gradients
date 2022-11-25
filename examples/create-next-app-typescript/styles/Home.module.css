@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+  background-color: black;
+  height: 100vh;
+}
+
+.h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 55px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  padding-top: 20px;
+}
