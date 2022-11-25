@@ -1,1 +1,2 @@
-export * from "./TextGradient"
+export * from "./LinearGradient"
+export * from "./RadialGradient"

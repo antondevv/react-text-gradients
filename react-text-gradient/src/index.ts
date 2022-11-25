@@ -1,5 +1,2 @@
-import { TextGradient } from "./components"
-
-export { TextGradient }
-// eslint-disable-next-line import/no-default-export
-export default TextGradient
+export { LinearGradient } from "./components"
+export { RadialGradient } from "./components"
