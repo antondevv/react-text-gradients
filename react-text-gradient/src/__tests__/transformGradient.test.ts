@@ -12,7 +12,7 @@ describe("transformGradient function", () => {
   test.each(directions)(
     "should transform linear gradient into valid inline css",
     (dir) => {
-      const style = toGradientStyle([dir, ["#fff", "#000"]], "linear", "black")
+      const style = toGradientStyle([dir, "#fff, #000"], "linear", "black")
       console.log(style)
       expect(style).toStrictEqual({
         ...defaultStyles,
@@ -23,7 +23,7 @@ describe("transformGradient function", () => {
   )
 
   test("should transform radial gradient into valid inline css", () => {
-    const style = toGradientStyle(["#fff", "#000"], "radial", "black")
+    const style = toGradientStyle(["#fff, #000"], "radial", "black")
     expect(style).toStrictEqual({
       ...defaultStyles,
       backgroundColor: "black",
@@ -32,7 +32,7 @@ describe("transformGradient function", () => {
   })
 
   test("should transform radial gradient into valid inline css using no fallback color", () => {
-    const style = toGradientStyle(["#fff", "#000"], "radial")
+    const style = toGradientStyle(["#fff, #000"], "radial")
     expect(style).toStrictEqual({
       ...defaultStyles,
       backgroundImage: `radial-gradient(#fff,#000)`,

@@ -7,7 +7,7 @@ const RadialGradientTest = () => (
   <RadialGradient
     fallbackColor="red"
     className="linear-gradient-text"
-    gradient={["#fff", "#000"]}
+    gradient={["#fff, #000"]}
   >
     Radial Gradient Text
   </RadialGradient>

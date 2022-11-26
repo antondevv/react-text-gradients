@@ -7,7 +7,7 @@ const LinearGradientTest = () => (
   <LinearGradient
     fallbackColor="red"
     className="linear-gradient-text"
-    gradient={["to left", ["#fff", "#000"]]}
+    gradient={["to left", "#fff, #000"]}
   >
     Linear Gradient Text
   </LinearGradient>
