@@ -17,7 +17,7 @@ describe("transformGradient function", () => {
       expect(style).toStrictEqual({
         ...defaultStyles,
         backgroundColor: "black",
-        backgroundImage: `linear-gradient(${dir}, #fff,#000)`,
+        backgroundImage: `linear-gradient(${dir}, #fff, #000)`,
       })
     }
   )
@@ -27,7 +27,7 @@ describe("transformGradient function", () => {
     expect(style).toStrictEqual({
       ...defaultStyles,
       backgroundColor: "black",
-      backgroundImage: `radial-gradient(#fff,#000)`,
+      backgroundImage: `radial-gradient(#fff, #000)`,
     })
   })
 
@@ -35,7 +35,7 @@ describe("transformGradient function", () => {
     const style = toGradientStyle(["#fff, #000"], "radial")
     expect(style).toStrictEqual({
       ...defaultStyles,
-      backgroundImage: `radial-gradient(#fff,#000)`,
+      backgroundImage: `radial-gradient(#fff, #000)`,
     })
   })
 })
