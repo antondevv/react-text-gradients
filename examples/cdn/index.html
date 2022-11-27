@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="../../react-text-gradient/lib/umd/bundle.js"></script>
+    <script type="text/babel">
+      const { LinearGradient } = ReactTextGradient
+      const { createRoot } = ReactDOM
+      const container = document.getElementById("root")
+      const root = createRoot(container)
+
+      root.render(
+        <LinearGradient
+          style={{ fontSize: "50px" }}
+          gradient={[
+            "to left",
+            "#17acff 23.45%, #ff68f0 73.52%, rgba(201, 68, 100, 0.7) 120.73%",
+          ]}
+        >
+          Linear Gradient
+        </LinearGradient>
+      )
+    </script>
+  </body>
+</html>
