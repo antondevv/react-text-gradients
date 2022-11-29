@@ -1,0 +1,27 @@
+.button {
+  padding: 12px 53px;
+  border-radius: 4px;
+  border: none;
+  font-size: 19px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 300ms;
+  font-weight: 400;
+  font-family: "Inter";
+  /* min-width: 256px; */
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+.button-light {
+  background-color: white;
+  color: black;
+  transition: 300ms;
+}
+
+.button-dark {
+  background-color: #353333;
+  color: white;
+  transition: 300ms;
+}
