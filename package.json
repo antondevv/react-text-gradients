@@ -6,6 +6,10 @@
   "main": "index.js",
   "author": "Anton Franzen",
   "license": "MIT",
+  "scripts": {
+    "build": "yarn workspace react-text-gradient build",
+    "test": "yarn workspace react-text-gradient test"
+  },
   "workspaces": [
     "react-text-gradient",
     "apps/*",
