@@ -11,6 +11,10 @@
   "files": [
     "./lib"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antondevv/react-text-gradient"
+  },
   "scripts": {
     "clean": "rimraf lib",
     "prebuild": "yarn clean",
