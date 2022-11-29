@@ -45,5 +45,8 @@
     "@types/jest": "^29.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
   }
 }
