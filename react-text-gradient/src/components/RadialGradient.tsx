@@ -9,9 +9,12 @@ export const RadialGradient = ({
   fallbackColor,
   ...rest
 }: RadialGradientProps) => {
-  const style = toGradientStyle(gradient, "radial", fallbackColor)
+  const style = {
+    ...toGradientStyle(gradient, "radial", fallbackColor),
+    ...rest.style,
+  }
   return (
-    <Span style={style} {...rest}>
+    <Span {...rest} style={style}>
       {children}
     </Span>
   )

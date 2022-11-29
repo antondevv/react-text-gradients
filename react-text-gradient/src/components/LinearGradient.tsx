@@ -9,9 +9,12 @@ export const LinearGradient = ({
   fallbackColor,
   ...rest
 }: LinearGradientProps) => {
-  const style = toGradientStyle(gradient, "linear", fallbackColor)
+  const style = {
+    ...toGradientStyle(gradient, "linear", fallbackColor),
+    ...rest.style,
+  }
   return (
-    <Span style={style} {...rest}>
+    <Span {...rest} style={style}>
       {children}
     </Span>
   )
