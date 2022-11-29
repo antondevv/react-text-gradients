@@ -19,6 +19,13 @@
   "bugs": {
     "url": "https://github.com/antondevv/react-text-gradient/issues"
   },
+  "keywords": [
+    "react gradient",
+    "react text gradient",
+    "react linear text gradient",
+    "gradient text for react",
+    "react gradient text"
+  ],
   "scripts": {
     "clean": "rimraf lib",
     "prebuild": "yarn clean",
