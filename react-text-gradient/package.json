@@ -33,7 +33,9 @@
     "build": "yarn build:esm && yarn build:cjs && yarn build:umd",
     "build:umd": "rollup --config --bundleConfigAsCjs",
     "build:esm": "tsc --project tsconfig.esm.json",
-    "build:cjs": "tsc --project tsconfig.cjs.json"
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "prepublissshOnly": "yarn test && yarn build",
+    "preversion": "yarn test && yarn build"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.0.1",
