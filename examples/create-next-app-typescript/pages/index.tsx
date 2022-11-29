@@ -6,20 +6,15 @@ import { LinearGradient as Lg, RadialGradient as Rg } from "react-text-gradient"
 export default function Home() {
   return (
     <div className={styles.App}>
-      <h1 className={styles.h1}>
-        <Lg gradient={["to left", ["#17acff", "#ff68f0"]]}>
-          Hey i'm a linear!
-        </Lg>
+      <h1 className="h1">
+        <Lg gradient={["to left", "#17acff ,#ff68f0"]}>Hey i'm a linear!</Lg>
       </h1>
 
-      <h1 className={styles.h1}>
+      <h1 className="h1">
         <Rg
           gradient={[
-            "#17acff 23.45%",
-            "#ff68f0 73.52%",
-            "rgba(201, 68, 100, 0.7) 120.73%",
+            "circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%",
           ]}
-          fallbackColor="#000"
         >
           Hey i'm a radial!
         </Rg>
