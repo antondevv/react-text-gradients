@@ -30,11 +30,7 @@ export default function Home() {
                       <LinearGradient
                         gradient={[
                           "to left",
-                          [
-                            "#17acff 23.45%",
-                            "#ff68f0 73.52%",
-                            "rgba(201, 68, 100, 0.7) 120.73%",
-                          ],
+                          "#17acff 23.45%, #ff68f0 73.52%, rgba(201, 68, 100, 0.7) 120.73%",
                         ]}
                         fallbackColor="red"
                       >
