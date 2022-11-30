@@ -1,3 +1,4 @@
+import { CSSProperties } from "react"
 import { GradientTypes, Linear, Radial } from "../types"
 
 export const directions = [
@@ -16,7 +17,8 @@ export type Directions = typeof directions[number]
 const defaultStyles = {
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
-}
+  WebkitBoxDecorationBreak: "clone",
+} as const
 
 const genDefaultStyle = (fallbackColor?: string) => {
   return fallbackColor
