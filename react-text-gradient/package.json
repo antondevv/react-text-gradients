@@ -12,6 +12,7 @@
     "lib/**/*",
     "LICENSE.MD"
   ],
+  "homepage": "https://react-text-gradient.vercel.app/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/antondevv/react-text-gradient"
