@@ -1,3 +1,4 @@
+import { CSSProperties } from "react"
 import { Directions } from "../helpers"
 
 export type GradientTypes = "linear" | "radial"
