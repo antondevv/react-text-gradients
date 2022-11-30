@@ -1,12 +1,5 @@
-import * as React from "react"
 import "@testing-library/jest-dom"
-import { render, screen } from "@testing-library/react"
-import { toGradientStyle, directions } from "../helpers"
-
-const defaultStyles = {
-  WebkitBackgroundClip: "text",
-  WebkitTextFillColor: "transparent",
-}
+import { toGradientStyle, directions, defaultStyles } from "../helpers"
 
 describe("transformGradient function", () => {
   test.each(directions)(

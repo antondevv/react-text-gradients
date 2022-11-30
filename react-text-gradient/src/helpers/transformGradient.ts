@@ -14,7 +14,7 @@ export const directions = [
 
 export type Directions = typeof directions[number]
 
-const defaultStyles = {
+export const defaultStyles = {
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   WebkitBoxDecorationBreak: "clone",
