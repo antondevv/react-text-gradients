@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css"
 // @ts-ignore
 import ghIcon from "../../public/gh.svg"
 import imagePreview from "../../public/LG3.png"
-import { LinearGradient, RadialGradient } from "react-text-gradient"
+// import { LinearGradient, RadialGradient } from "react-text-gradient"
 
 export default function Home() {
   return (
