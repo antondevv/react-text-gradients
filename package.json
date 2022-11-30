@@ -2,7 +2,7 @@
   "name": "react-text-gradient",
   "version": "1.0.0",
   "private": true,
-  "description": "Lightweight React component to make gradient texts fast as lighting",
+  "description": "A React component for easily making gradient texts in React",
   "main": "index.js",
   "author": "Anton Franzen",
   "license": "MIT",
