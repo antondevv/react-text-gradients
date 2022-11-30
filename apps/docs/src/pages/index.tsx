@@ -13,20 +13,22 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>React Text Gradient</title>
-        <meta name="description" content="Gradient Text For React" />
+        <meta name="React Text Gradient" content="Gradient Text For React" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.flex}>
         <div className={styles.grid}>
+          {/* 
+          TODO: Maybe add custom documentation and have a navbar for it 
           <div className={styles.gridNav}>
             <Nav />
-          </div>
+          </div> */}
           <main>
             <div className={styles.gridContent}>
               <div className={styles.content}>
                 <div className={styles.contentFlex}>
                   <div className={styles.contentText}>
-                    <h1 className={styles.title}>
+                    {/* <h1 className={styles.title}>
                       <LinearGradient
                         gradient={[
                           "to left",
@@ -37,7 +39,7 @@ export default function Home() {
                         Gradient Text <br />
                         For React.
                       </LinearGradient>
-                    </h1>
+                    </h1> */}
                     <p className={styles.description}>
                       A React component for easily making gradient texts in
                       React 🚀
@@ -53,24 +55,25 @@ export default function Home() {
                       </div>
                       <div className={styles.featureWrapper}>
                         <p className={styles.featureText}>
-                          ⚙️ Choose compatible support
+                          ⚙️ Supports tree shaking
                         </p>
                         <p className={styles.featureText}>
-                          🚀 Supports ems, cjs & umd
+                          ⚡ Lightweight ~ 500 bytes/component
                         </p>
                       </div>
                       <div className={styles.featureWrapper}>
                         <p className={styles.featureText}>
                           🧩 Built using 0 dependencies
                         </p>
+
                         <p className={styles.featureText}>
-                          ⚡ Lightweight ~ 700 bytes
+                          🚀 Supports ems, cjs & umd
                         </p>
                       </div>
                     </div>
                     <div className={styles.buttonWrapper}>
                       <ButtonLink
-                        hrefTo="https://github.com/antondevv/react-text-gradient"
+                        hrefTo="https://www.npmjs.com/package/react-text-gradient"
                         theme="light"
                       >
                         Get started
