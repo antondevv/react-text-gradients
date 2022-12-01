@@ -7,6 +7,7 @@
   "author": "Anton Franzen",
   "license": "MIT",
   "scripts": {
+    "lint": "yarn workspace react-text-gradient lint",
     "build": "yarn workspace react-text-gradient build",
     "test": "yarn workspace react-text-gradient test"
   },
