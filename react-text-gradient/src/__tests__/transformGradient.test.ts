@@ -6,7 +6,6 @@ describe("transformGradient function", () => {
     "should transform linear gradient into valid inline css",
     (dir) => {
       const style = toGradientStyle([dir, "#fff, #000"], "linear", "black")
-      console.log(style)
       expect(style).toStrictEqual({
         ...defaultStyles,
         backgroundColor: "black",
