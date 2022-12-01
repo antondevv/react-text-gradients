@@ -10,7 +10,8 @@
   "sideEffects": false,
   "files": [
     "lib/**/*",
-    "LICENSE.MD"
+    "LICENSE.MD",
+    "README.MD"
   ],
   "homepage": "https://react-text-gradient.vercel.app/",
   "repository": {
