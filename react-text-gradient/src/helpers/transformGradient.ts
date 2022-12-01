@@ -1,4 +1,3 @@
-import { CSSProperties } from "react"
 import { GradientTypes, Linear, Radial } from "../types"
 
 export const directions = [
@@ -20,11 +19,10 @@ export const defaultStyles = {
   WebkitBoxDecorationBreak: "clone",
 } as const
 
-const genDefaultStyle = (fallbackColor?: string) => {
-  return fallbackColor
+const genDefaultStyle = (fallbackColor?: string) =>
+  fallbackColor
     ? { ...defaultStyles, backgroundColor: fallbackColor }
     : defaultStyles
-}
 
 export const toRadialStyle = (gradient: Radial, fallbackColor?: string) => {
   if (!Array.isArray(gradient))
@@ -39,7 +37,7 @@ export const toRadialStyle = (gradient: Radial, fallbackColor?: string) => {
 
 export const toLinearStyle = (gradient: Linear, fallbackColor?: string) => {
   const [dir, colors] = gradient
-  const direction = directions.includes(dir as any) ? dir : null
+  const direction = directions.includes(dir) ? dir : null
 
   if (!direction)
     throw new Error(
