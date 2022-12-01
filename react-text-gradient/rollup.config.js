@@ -17,5 +17,5 @@ export default {
     resolve(),
     terser({ format: { comments: false }, compress: true, mangle: true }),
   ],
-  external: ["react", "react-dom"],
+  external: ["react"],
 }
