@@ -214,8 +214,3 @@ This is compatible with "Google Chrome 25+, Mozilla Firefox 16+, Opera 15+, Safa
 If you wonder how this works, it's quite straight forward.
 
 It returns a `span` element, and applies a `style` attribute on it with valid css.
-
-## Project uses yarn workspaces
-
-The project uses yarn workspaces to make it simple to install & test "react-text-gradient" in the examples folder without having to restart anything. The CI executes the build and test scripts for "react-text-gradient" from the project's root "package.json."
-Although there are various ways to deal with monorepos, yarn workspaces was a good option for my library. Although I initially started using turborepo, I later switched to yarnworkspaces because turborepo wasn't really necessary.
