@@ -5,7 +5,7 @@ export default {
   input: "lib/esm/index.js",
   output: [
     {
-      file: "lib/umd/bundle.js",
+      file: "lib/umd/react-text-gradient.umd.min.js",
       format: "umd",
       name: "ReactTextGradient",
       globals: {
