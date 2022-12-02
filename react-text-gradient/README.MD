@@ -54,7 +54,7 @@ import { LinearGradient } from "react-text-gradient"
 ```javascript
 <h1>
   <LinearGradient gradient={["to left", "#17acff ,#ff68f0"]}>
-    Gradient Text here
+    Text
   </LinearGradient>
 </h1>
 ```
@@ -65,6 +65,7 @@ import { LinearGradient } from "react-text-gradient"
 | ------------- | ------------------------ | ----------------------------------------------- | -------- |
 | gradient      | Array<direction, colors> | `direction` and `colors` for the gradient       | `true`   |
 | fallbackColor | string                   | fallback color if the browser is not compatable | `false`  |
+| children      | ReactNode                | text to be applied with the gradient            | `true`   |
 
 #### <ins>gradient</ins>
 
@@ -94,9 +95,7 @@ import { RadialGradient } from "react-text-gradient"
 
 ```javascript
 <h1>
-  <RadialGradient gradient={["to left", "#17acff ,#ff68f0"]}>
-    Gradient Text here
-  </RadialGradient>
+  <RadialGradient gradient={["#17acff , #ff68f0"]}>Text</RadialGradient>
 </h1>
 ```
 
@@ -106,6 +105,7 @@ import { RadialGradient } from "react-text-gradient"
 | ------------- | -------------- | ----------------------------------------------- | -------- |
 | gradient      | Array< colors> | `colors` for the gradient                       | `true`   |
 | fallbackColor | string         | fallback color if the browser is not compatable | `false`  |
+| children      | ReactNode      | text to be applied with the gradient            | `true`   |
 
 #### <ins>gradient</ins>
 
@@ -132,11 +132,11 @@ const App = () => {
   return (
     <div className="app">
       <h1 className="h1">
-        <Lg gradient={["to left", "#17acff ,#ff68f0"]}>Hey i'm a linear!</Lg>
+        <Lg gradient={["to left", "#17acff ,#ff68f0"]}>Text</Lg>
       </h1>
 
       <h1 className="h1">
-        <Rg gradient={["#17acff ,#ff68f0"]}>Hey i'm a radial!</Rg>
+        <Rg gradient={["#17acff ,#ff68f0"]}>Text</Rg>
       </h1>
     </div>
   )
@@ -158,7 +158,7 @@ const App = () => {
             "90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%",
           ]}
         >
-          Hey i'm a linear!
+          Text
         </Lg>
       </h1>
 
@@ -168,7 +168,7 @@ const App = () => {
             "circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%",
           ]}
         >
-          Hey i'm a radial!
+          Text
         </Rg>
       </h1>
     </div>
@@ -191,7 +191,7 @@ const App = () => {
           className="gradient-title"
           data-testid="gradient-title-element"
         >
-          Hey i'm a linear!
+          Text
         </Lg>
       </h1>
     </div>
@@ -203,14 +203,34 @@ const App = () => {
 
 ### 1. Hot reload
 
-For some reason, a few browsers have trouble with the way react renders inline gradient styles. As a result, if you alter the gradient colors, for example, and save it, a solid background color will appear. Simply make a hard refresh if this occurs to you, and it will disappear.
+For some reason, a few browsers might have trouble with the rendering inline gradient styles when using hot reload. As a result, if you change the gradient colors, for example, and save it, a solid background color will might appear. Simply make a hard refresh if this occurs to you, and it will disappear.
 
 ### 2. Browser compatability
 
-This is compatible with "Google Chrome 25+, Mozilla Firefox 16+, Opera 15+, Safari 6.1+, IE 10+, iOS 7+, and Android 4.4+" right out of the gate. If you want to define a color that will be used as a fallback if there are compatibility problems, pass a `fallbackColor` prop.
+This is compatible with `Google Chrome 25+, Mozilla Firefox 16+, Opera 15+, Safari 6.1+, IE 10+, iOS 7+, and Android 4.4+` right out of the gate. If you want to define a color that will be used as a fallback if there are compatibility problems, pass a `fallbackColor` prop.
 
 ## Under the hood
 
 If you wonder how this works, it's quite straight forward.
 
 It returns a `span` element, and applies a `style` attribute on it with valid css.
+
+So if you have something like this:
+
+```javascript
+<h1>
+  <LinearGradient gradient={["to left", "#17acff ,#ff68f0"]}>
+    Text
+  </LinearGradient>
+</h1>
+```
+
+This is what will be generated:
+
+```javascript
+<h1>
+  <span style="-webkit-background-clip:text;-webkit-text-fill-color:transparent;-webkit-box-decoration-break:clone;background-image:linear-gradient(to left, #17acff ,#ff68f0)">
+    Text
+  </span>
+</h1>
+```
