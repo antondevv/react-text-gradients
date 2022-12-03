@@ -15,7 +15,7 @@ A React component for easily making gradient texts in React 🚀
 
 <p align="center">
   <a href="https://react-text-gradient.vercel.app">
-    <img src="https://user-images.githubusercontent.com/53121683/204915241-2b63e5f4-365a-4eba-a238-ee01d6bef92d.jpg" alt="Demo" width="300" />
+    <img src="https://user-images.githubusercontent.com/53121683/204915241-2b63e5f4-365a-4eba-a238-ee01d6bef92d.jpg" alt="Demo"  />
   </a>
 </p>
 
