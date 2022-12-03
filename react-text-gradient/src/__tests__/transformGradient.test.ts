@@ -1,5 +1,11 @@
 import "@testing-library/jest-dom"
-import { toGradientStyle, directions, defaultStyles } from "../helpers"
+import {
+  toGradientStyle,
+  toLinearStyle,
+  toRadialStyle,
+  directions,
+  defaultStyles,
+} from "../helpers"
 
 describe("transformGradient function", () => {
   test.each(directions)(
@@ -29,5 +35,25 @@ describe("transformGradient function", () => {
       ...defaultStyles,
       backgroundImage: `radial-gradient(#fff, #000)`,
     })
+  })
+})
+
+describe("toLinearStyle function", () => {
+  test("toLinearStyle should fail", () => {
+    expect(() => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      toLinearStyle(["", ""])
+    }).toThrow()
+  })
+})
+
+describe("toRadialStyle function", () => {
+  test("toRadialStyle should fail", () => {
+    expect(() => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      toRadialStyle("")
+    }).toThrow()
   })
 })
