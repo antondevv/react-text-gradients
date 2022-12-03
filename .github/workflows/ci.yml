@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: ["master", "develop"]
+    branches: ["master", "develop", "add-testcoverage"]
   pull_request:
     branches: ["master", "develop"]
 
@@ -31,7 +31,7 @@ jobs:
         run: yarn lint
 
       - name: Test
-        run: yarn test
+        run: yarn test:coveralls
 
       - name: Build
         run: yarn build
