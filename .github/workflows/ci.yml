@@ -33,11 +33,6 @@ jobs:
       - name: Test
         run: yarn test
 
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}/react-text-gradient/coverage
-          cat ${{ github.workspace }}/react-text-gradient/coverage/lcov.info
-
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
