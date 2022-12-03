@@ -16,7 +16,7 @@
   "homepage": "https://react-text-gradient.vercel.app/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antondevv/react-text-gradient"
+    "url": "https://github.com/antondevv/react-text-gradient.git"
   },
   "bugs": {
     "url": "https://github.com/antondevv/react-text-gradient/issues"
@@ -62,9 +62,9 @@
     "typescript": "^4.8.4"
   },
   "peerDependencies": {
-    "react": ">16.8.0"
+    "react": ">=16.8.0"
   },
   "optionalPeerDependencies": {
-    "@types/react": ">16.8.0"
+    "@types/react": ">=16.8.0"
   }
 }
