@@ -42,7 +42,7 @@ jobs:
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: ./react-text-gradient/coverage/Icov.info
+          path-to-lcov: ${{ github.workspace }}/react-text-gradient/coverage/Icov.info
 
       - name: Build
         run: yarn build
