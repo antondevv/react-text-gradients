@@ -33,7 +33,6 @@
     "prebuild": "yarn clean",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "test:coveralls": "jest --coverage",
     "lint": "eslint src/**/*",
     "build": "yarn build:esm && yarn build:cjs && yarn build:umd",
     "build:umd": "rollup --config --bundleConfigAsCjs",
