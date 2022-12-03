@@ -42,6 +42,6 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-          ls ${{ github.workspace/react-text-gradient }}
+
       - name: Build
         run: yarn build
