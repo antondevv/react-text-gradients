@@ -13,7 +13,11 @@ A React component for easily making gradient texts in React 🚀
 
 ### 🔥 Live demo
 
-![react-text-gradient](https://user-images.githubusercontent.com/53121683/204915241-2b63e5f4-365a-4eba-a238-ee01d6bef92d.jpg)
+<p align="center">
+  <a href="https://react-text-gradient.vercel.app">
+    <img src="https://user-images.githubusercontent.com/53121683/204915241-2b63e5f4-365a-4eba-a238-ee01d6bef92d.jpg" alt="Demo" width="300" />
+  </a>
+</p>
 
 ### Installation
 
