@@ -42,7 +42,7 @@ jobs:
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: ${{ github.workspace }}/coverage/icov.info
+          path-to-lcov: ${{ github.workspace }}/coverage/lcov.info
 
       - name: Build
         run: yarn build
