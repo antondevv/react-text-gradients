@@ -1,6 +1,6 @@
-# How to contribute to React Text Gradient
+# How to contribute to react-text-gradient
 
-Here you can read how to collaborate to this project.
+This document contains information on how to contribute to the project.
 
 ## Report bugs using Github's issues
 
