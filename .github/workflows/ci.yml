@@ -1,8 +1,6 @@
 name: CI
 
 on:
-  push:
-    branches: ["master", "develop"]
   pull_request:
     branches: ["master", "develop"]
 
@@ -38,6 +36,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           path-to-lcov: ${{ github.workspace }}/react-text-gradient/coverage/lcov.info
+          base-path: ${{ github.workspace }}/react-text-gradient
 
       - name: Build
         run: yarn build
