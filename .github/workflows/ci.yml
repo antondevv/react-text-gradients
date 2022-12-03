@@ -33,15 +33,15 @@ jobs:
       - name: Test
         run: yarn test
 
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           path-to-lcov: ./react-text-gradient/coverage/Icov.info
-
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
 
       - name: Build
         run: yarn build
