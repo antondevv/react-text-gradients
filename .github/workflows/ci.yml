@@ -36,7 +36,7 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-          ls ${{ github.workspace }}/src
+          ls ${{ github.workspace }}/react-text-gradient
 
       - name: Coveralls
         uses: coverallsapp/github-action@master
