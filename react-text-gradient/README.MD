@@ -248,4 +248,4 @@ This is what will be generated:
 
 Contributions are always welcome! Please feel free to submit a pull request or to open any issue.
 
-To find out how to setup the development environment etc, go to [`CONTRIBUTING.MD`](https://github.com/antondevv/react-text-gradient/blob/master/CONTRIBUTING.MD)
+To find out how to setup the development environment etc, go to [CONTRIBUTE.MD](https://github.com/antondevv/react-text-gradient/blob/master/CONTRIBUTE.MD)
