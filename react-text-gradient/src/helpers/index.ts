@@ -1,1 +1,1 @@
-export * from "./transformGradient";
+export * from './transformGradient'

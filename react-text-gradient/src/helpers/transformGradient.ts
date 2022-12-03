@@ -1,24 +1,23 @@
-import { GradientTypes, Linear, Radial } from "../types"
+import { GradientTypes, Linear, Radial } from '../types'
 
 export const directions = [
-  "to left",
-  "to top left",
-  "to bottom left",
-  "to right",
-  "to top right",
-  "to bottom right",
-  "to top",
-  "to bottom",
+  'to left',
+  'to top left',
+  'to bottom left',
+  'to right',
+  'to top right',
+  'to bottom right',
+  'to top',
+  'to bottom',
 ] as const
 
 export type Directions = typeof directions[number]
 
 export const defaultStyles = {
-  WebkitBackgroundClip: "text",
-  WebkitTextFillColor: "transparent",
-  WebkitBoxDecorationBreak: "clone",
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  WebkitBoxDecorationBreak: 'clone',
 } as const
-
 const genDefaultStyle = (fallbackColor?: string) =>
   fallbackColor
     ? { ...defaultStyles, backgroundColor: fallbackColor }
@@ -54,8 +53,8 @@ export const toGradientStyle = (
   gradientType: GradientTypes,
   fallbackColor?: string
 ) => {
-  if (gradientType === "radial")
+  if (gradientType === 'radial')
     return toRadialStyle(gradient as Radial, fallbackColor)
-  if (gradientType === "linear")
+  if (gradientType === 'linear')
     return toLinearStyle(gradient as Linear, fallbackColor)
 }
