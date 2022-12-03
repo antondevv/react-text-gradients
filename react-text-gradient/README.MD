@@ -1,5 +1,10 @@
 # react-text-gradient
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/antondevv/react-text-gradient/CI?style=flat-square)
+![GitHub](https://img.shields.io/github/license/antondevv/react-text-gradient?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/antondevv/react-text-gradient?style=flat-square)
+![Coveralls](https://img.shields.io/coverallsCoverage/github/antondevv/react-text-gradient?style=flat-square)
+
 A React component for easily making gradient texts in React 🚀
 
 ### ⭐ Features
