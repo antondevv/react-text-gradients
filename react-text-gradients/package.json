@@ -1,6 +1,6 @@
 {
   "name": "react-text-gradients",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.0",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "unpkg": "lib/umd/react-text-gradients.umd.min.js",
