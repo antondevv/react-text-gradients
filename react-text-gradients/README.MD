@@ -1,9 +1,9 @@
-# react-text-gradient
+# react-text-gradients
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/antondevv/react-text-gradient/CI?style=flat-square)
-![GitHub](https://img.shields.io/github/license/antondevv/react-text-gradient?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/antondevv/react-text-gradient?style=flat-square)
-![Coveralls](https://img.shields.io/coverallsCoverage/github/antondevv/react-text-gradient?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/antondevv/react-text-gradients/CI?style=flat-square)
+![GitHub](https://img.shields.io/github/license/antondevv/react-text-gradients?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/antondevv/react-text-gradients?style=flat-square)
+![Coveralls](https://img.shields.io/coverallsCoverage/github/antondevv/react-text-gradients?style=flat-square)
 
 A React library that provides two components for applying **linear** and **radial** gradients to text in React applications 🚀
 
@@ -19,19 +19,19 @@ A React library that provides two components for applying **linear** and **radia
 ### 🔥 Live demo
 
 <p align="center">
-  <a href="https://react-text-gradient.vercel.app">
+  <a href="https://react-text-gradients.vercel.app">
     <img src="https://user-images.githubusercontent.com/53121683/204915241-2b63e5f4-365a-4eba-a238-ee01d6bef92d.jpg" alt="Demo"  />
   </a>
 </p>
 
 # Usage
 
-To use `react-text-gradient` in your React application, import the `LinearGradient` or `RadialGradient` component:
+To use `react-text-gradients` in your React application, import the `LinearGradient` or `RadialGradient` component:
 
 ## LinearGradient
 
 ```javascript
-import { LinearGradient } from 'react-text-gradient'
+import { LinearGradient } from 'react-text-gradients'
 ```
 
 The `LinearGradient` component can be used to apply a linear gradient to text. It should be used inside a HTML text element, such as an h1 tag.
@@ -97,7 +97,7 @@ Both components also accept an optional `fallbackColor` prop, which specifies a 
 ## RadialGradient
 
 ```javascript
-import { RadialGradient } from 'react-text-gradient'
+import { RadialGradient } from 'react-text-gradients'
 ```
 
 The `RadialGradient` component can be used to apply a radial gradient to text. It should be used inside a HTML text element, such as an h1 tag. It accepts the same props as the LinearGradient component, except that the `gradient` prop should `not` contain any `direction`.
@@ -151,7 +151,7 @@ Both components also accept an optional `fallbackColor` prop, which specifies a 
 ## Basic gradients
 
 ```javascript
-import { LinearGradient, RadialGradient } from 'react-text-gradient'
+import { LinearGradient, RadialGradient } from 'react-text-gradients'
 
 function App() {
   return (
@@ -174,7 +174,7 @@ function App() {
 ## Complex gradients
 
 ```javascript
-import { LinearGradient, RadialGradient } from 'react-text-gradient'
+import { LinearGradient, RadialGradient } from 'react-text-gradients'
 
 const App = () => {
   return (
@@ -207,7 +207,7 @@ const App = () => {
 ## Passing ref & other props
 
 ```javascript
-import { LinearGradient } from 'react-text-gradient'
+import { LinearGradient } from 'react-text-gradients'
 
 const App = () => {
   const ref = useRef(null)
@@ -266,4 +266,4 @@ This component is compatible with `Google Chrome 25+, Mozilla Firefox 16+, Opera
 
 Contributions are always welcome! Please feel free to submit a pull request or to open any issue.
 
-To learn how to set up the development environment, please visit [CONTRIBUTE.MD](https://github.com/antondevv/react-text-gradient/blob/master/CONTRIBUTE.MD)
+To learn how to set up the development environment, please visit [CONTRIBUTE.MD](https://github.com/antondevv/react-text-gradients/blob/master/CONTRIBUTE.MD)
