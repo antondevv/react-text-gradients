@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css"
 // @ts-ignore
 import ghIcon from "../../public/gh.svg"
 import imagePreview from "../../public/LG3.png"
-// import { LinearGradient, RadialGradient } from "react-text-gradients"
+import { LinearGradient } from "react-text-gradients"
 
 export default function Home() {
   return (
@@ -28,7 +28,7 @@ export default function Home() {
               <div className={styles.content}>
                 <div className={styles.contentFlex}>
                   <div className={styles.contentText}>
-                    {/* <h1 className={styles.title}>
+                    <h1 className={styles.title}>
                       <LinearGradient
                         gradient={[
                           "to left",
@@ -39,7 +39,7 @@ export default function Home() {
                         Gradient Text <br />
                         For React.
                       </LinearGradient>
-                    </h1> */}
+                    </h1>
                     <p className={styles.description}>
                       A React component for easily making gradient texts in
                       React 🚀
