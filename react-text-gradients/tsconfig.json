@@ -7,12 +7,13 @@
     "strict": true,
     "jsx": "react",
     "sourceMap": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "declarationDir": "lib/types",
-    "moduleResolution": "Node"
+    "moduleResolution": "Node",
+    "types": ["node", "jest", "@testing-library/jest-dom"]
   },
-  "exclude": ["node_modules", "lib", "rollup.config.js", "__tests__/**/*"]
+  "exclude": ["node_modules", "lib", "rollup.config.js"]
 }
