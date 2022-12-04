@@ -1,154 +1,170 @@
-# react-text-gradients
+# react-text-gradient
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/antondevv/react-text-gradients/CI?style=flat-square)
-![GitHub](https://img.shields.io/github/license/antondevv/react-text-gradients?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/antondevv/react-text-gradients?style=flat-square)
-![Coveralls](https://img.shields.io/coverallsCoverage/github/antondevv/react-text-gradients?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/antondevv/react-text-gradient/CI?style=flat-square)
+![GitHub](https://img.shields.io/github/license/antondevv/react-text-gradient?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/antondevv/react-text-gradient?style=flat-square)
+![Coveralls](https://img.shields.io/coverallsCoverage/github/antondevv/react-text-gradient?style=flat-square)
 
-A React component for easily making gradient texts in React 🚀
+A React library that provides two components for applying **linear** and **radial** gradients to text in React applications 🚀
 
 ### ⭐ Features
 
 - 🔥 **Written 100% in TypeScript**
-- 💅 **Fully customize colors by props**
-- 🥷 **Supports esm, cjs & umd**
+- 💅 **Fully customizable colors through props**
+- 🥷 **Supports ESM, CJS & UMD**
 - ⚙️ **Supports tree shaking**
 - ⚡ **Lightweight ~ 500 bytes/component**
-- 🧩 **Build using 0 dependencies**
+- 🧩 **Built using 0 dependencies**
 
 ### 🔥 Live demo
 
 <p align="center">
-  <a href="https://react-text-gradients.vercel.app">
+  <a href="https://react-text-gradient.vercel.app">
     <img src="https://user-images.githubusercontent.com/53121683/204915241-2b63e5f4-365a-4eba-a238-ee01d6bef92d.jpg" alt="Demo"  />
   </a>
 </p>
 
-### Installation
-
-Using npm:
-
-```
-npm install --save react-text-gradients
-```
-
-using yarn:
-
-```
-yarn add react-text-gradients
-```
-
-using pnpm:
-
-```
-pnpm add react-text-gradients
-```
-
 # Usage
 
-There are 2 components you can import from `react-text-gradients`.
-
-Let's go over how each one works:
+To use `react-text-gradient` in your React application, import the `LinearGradient` or `RadialGradient` component:
 
 ## LinearGradient
 
-### Import component
-
 ```javascript
-import { LinearGradient } from 'react-text-gradients'
+import { LinearGradient } from 'react-text-gradient'
 ```
 
-### Usage
+The `LinearGradient` component can be used to apply a linear gradient to text. It should be used inside a HTML text element, such as an h1 tag.
 
 ```javascript
 <h1>
   <LinearGradient gradient={['to left', '#17acff ,#ff68f0']}>
-    Text
+    My text with a linear gradient
   </LinearGradient>
 </h1>
 ```
 
 ### Props
 
-| Prop          | Type                     | Description                                     | Required |
-| ------------- | ------------------------ | ----------------------------------------------- | -------- |
-| gradient      | Array<direction, colors> | `direction` and `colors` for the gradient       | `true`   |
-| fallbackColor | string                   | fallback color if the browser is not compatable | `false`  |
-| children      | ReactNode                | text to be applied with the gradient            | `true`   |
+| Prop          | Type                          | Description                                         | Required |
+| ------------- | ----------------------------- | --------------------------------------------------- | -------- |
+| gradient      | Array of direction and colors | Specifies the direction and colors for the gradient | `true`   |
+| fallbackColor | string                        | Fallback color if the browser is not compatible     | `false`  |
+| children      | ReactNode                     | Text to be applied with the gradient                | `true`   |
 
-#### <ins>gradient</ins>
+**gradient** prop
 
-The `gradient` prop is where you specify the `direction` and `colors` for the `LinearGradient` component.
+The `gradient` prop is where you specify the direction and colors for the `LinearGradient` component. It has the following type:
 
-It has the type of: `[<direction>, <colors>]`
-
-Where `<direction>` is: `"to left" | "to top left" | "to bottom left" | "to right" | "to top right" | "to bottom right" | "to top" | "to bottom"`
-
-Where `<colors>` is: A `string` that contains any valid values of [`linear-gradient()`](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient#formal_syntax)
-
-Example usage of `gradient` prop: `gradient={["to left", "#17acff ,#ff68f0"]}`
-
-#### <ins>fallbackColor </ins>
-
-If the browser is incompatible with linear-gradient(), a fallback color can be specified in the `fallbackColor` prop.
-
-## RadialGradient
-
-### Import component
-
-```javascript
-import { RadialGradient } from 'react-text-gradients'
+```
+[<direction>, <colors>]
 ```
 
-### Usage
+`direction` is a string that can be any of the following values:
+
+- `to left`
+- `to top left`
+- `to bottom left`
+- `to right`
+- `to top right`
+- `to bottom right`
+- `to top`
+- `to bottom`
+
+`colors` is a string containing any valid values of [linear-gradient()](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient#formal_syntax) such as `"red, blue"` or `"#ff0000, #0000ff"`.
+
+Here is an example of using the `gradient` prop:
+
+```javascript
+gradient={["to left", "#17acff ,#ff68f0"]}
+```
+
+**fallbackColor** prop
+
+Both components also accept an optional `fallbackColor` prop, which specifies a fallback color to use if the gradient is not supported by the browser. If the fallbackColor prop is not specified, no fallback color will be used.
 
 ```javascript
 <h1>
-  <RadialGradient gradient={['#17acff , #ff68f0']}>Text</RadialGradient>
+  <LinearGradient
+    gradient={['to left', '#17acff ,#ff68f0']}
+    fallbackColor="black"
+  >
+    My text with a linear gradient and a fallback color
+  </LinearGradient>
+</h1>
+```
+
+## RadialGradient
+
+```javascript
+import { RadialGradient } from 'react-text-gradient'
+```
+
+The `RadialGradient` component can be used to apply a radial gradient to text. It should be used inside a HTML text element, such as an h1 tag. It accepts the same props as the LinearGradient component, except that the `gradient` prop should `not` contain any `direction`.
+
+```javascript
+<h1>
+  <RadialGradient gradient={['red, blue']}>
+    My text with a radial gradient
+  </RadialGradient>
 </h1>
 ```
 
 ### Props
 
-| Prop          | Type           | Description                                     | Required |
-| ------------- | -------------- | ----------------------------------------------- | -------- |
-| gradient      | Array< colors> | `colors` for the gradient                       | `true`   |
-| fallbackColor | string         | fallback color if the browser is not compatable | `false`  |
-| children      | ReactNode      | text to be applied with the gradient            | `true`   |
+| Prop          | Type         | Description                                         | Required |
+| ------------- | ------------ | --------------------------------------------------- | -------- |
+| gradient      | Array colors | Specifies the direction and colors for the gradient | `true`   |
+| fallbackColor | string       | Fallback color if the browser is not compatible     | `false`  |
+| children      | ReactNode    | Text to be applied with the gradient                | `true`   |
 
-#### <ins>gradient</ins>
+**gradient** Prop
 
-The `gradient` prop is where you specify the `colors` for the `RadialGradient` component.
+The `gradient` prop is where you specify the colors for the `RadialGradient` component. It has the following type:
 
-It has the type of: `[<colors>]`
+```
+[<colors>]
+```
 
-Where `<colors>` is: A `string` that contains any valid values of [`radial-gradient()`](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient#formal_syntax)
+**colors** is a string containing any valid values of [radial-gradient()](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient#formal_syntax)
 
-Example usage of `gradient` prop: `gradient={["#17acff ,#ff68f0"]}`
+Here is an example of using the `gradient` prop:
 
-#### <ins>fallbackColor</ins>
+```javascript
+gradient={["#17acff ,#ff68f0"]}
+```
 
-If the browser is incompatible with radial-gradient(), a fallback color can be specified in the `fallbackColor` prop.
+**fallbackColor** Prop
+
+Both components also accept an optional `fallbackColor` prop, which specifies a fallback color to use if the gradient is not supported by the browser. If the fallbackColor prop is not specified, no fallback color will be used.
+
+```javascript
+<h1>
+  <RadialGradient gradient={['#17acff ,#ff68f0']} fallbackColor="black">
+    My text with a radial gradient and a fallback color
+  </RadialGradient>
+</h1>
+```
 
 # Examples
 
-## Basic usage
+## Basic gradients
 
 ```javascript
-import {
-  LinearGradient as Lg,
-  RadialGradient as Rg,
-} from 'react-text-gradients'
+import { LinearGradient, RadialGradient } from 'react-text-gradient'
 
-const App = () => {
+function App() {
   return (
     <div className="app">
       <h1 className="h1">
-        <Lg gradient={['to left', '#17acff ,#ff68f0']}>Text</Lg>
+        <LinearGradient gradient={['to right', 'red, blue']}>
+          My text with a linear gradient
+        </LinearGradient>
       </h1>
-
       <h1 className="h1">
-        <Rg gradient={['#17acff ,#ff68f0']}>Text</Rg>
+        <RadialGradient gradient={['red, blue']}>
+          My text with a radial gradient
+        </RadialGradient>
       </h1>
     </div>
   )
@@ -158,33 +174,30 @@ const App = () => {
 ## Complex gradients
 
 ```javascript
-import {
-  LinearGradient as Lg,
-  RadialGradient as Rg,
-} from 'react-text-gradients'
+import { LinearGradient, RadialGradient } from 'react-text-gradient'
 
 const App = () => {
   return (
     <div className="app">
       <h1 className="h1">
-        <Lg
+        <LinearGradient
           gradient={[
             'to left',
             '90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%',
           ]}
         >
-          Text
-        </Lg>
+          My text with a linear gradient
+        </LinearGradient>
       </h1>
 
       <h1 className="h1">
-        <Rg
+        <RadialGradient
           gradient={[
             'circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%',
           ]}
         >
-          Text
-        </Rg>
+          My text with a radial gradient
+        </RadialGradient>
       </h1>
     </div>
   )
@@ -194,43 +207,32 @@ const App = () => {
 ## Passing ref & other props
 
 ```javascript
-import { LinearGradient as Lg } from 'react-text-gradients'
+import { LinearGradient } from 'react-text-gradient'
 
 const App = () => {
+  const ref = useRef(null)
   return (
     <div className="app">
       <h1 className="h1">
-        <Lg
+        <LinearGradient
           gradient={['to left', '#17acff ,#ff68f0']}
           ref={ref}
           className="gradient-title"
           data-testid="gradient-title-element"
         >
           Text
-        </Lg>
+        </LinearGradient>
       </h1>
     </div>
   )
 }
 ```
 
-## Caviats
+# How it works
 
-### 1. Hot reload
+The `LinearGradient` & `RadialGradient` component returns a `span` element with a style` attribute applied to it with valid CSS.
 
-For some reason, a few browsers might have trouble with the rendering inline gradient styles when using hot reload. As a result, if you change the gradient colors, for example, and save it, a solid background color will might appear. Simply make a hard refresh if this occurs to you, and it will disappear.
-
-### 2. Browser compatability
-
-This is compatible with `Google Chrome 25+, Mozilla Firefox 16+, Opera 15+, Safari 6.1+, IE 10+, iOS 7+, and Android 4.4+` right out of the gate. If you want to define a color that will be used as a fallback if there are compatibility problems, pass a `fallbackColor` prop.
-
-## Under the hood
-
-If you wonder how this works, it's quite straight forward.
-
-It returns a `span` element, and applies a `style` attribute on it with valid css.
-
-So if you have something like this:
+For example, given this code:
 
 ```javascript
 <h1>
@@ -250,8 +252,18 @@ This is what will be generated:
 </h1>
 ```
 
+## Caviats
+
+### 1. Hot reload
+
+Some browsers might have trouble rendering inline gradient styles when using hot reload. If you change the gradient colors and save it, a solid background color may appear. To fix this, simply do a hard refresh and the solid color should disappear.
+
+### 2. Browser compatability
+
+This component is compatible with `Google Chrome 25+, Mozilla Firefox 16+, Opera 15+, Safari 6.1+, IE 10+, iOS 7+, and Android 4.4+`. If you want to define a fallback color to use in case of compatibility issues, you can pass a fallbackColor prop.
+
 ## Contributing
 
 Contributions are always welcome! Please feel free to submit a pull request or to open any issue.
 
-To find out how to setup the development environment etc, go to [CONTRIBUTE.MD](https://github.com/antondevv/react-text-gradients/blob/master/CONTRIBUTE.MD)
+To learn how to set up the development environment, please visit [CONTRIBUTE.MD](https://github.com/antondevv/react-text-gradient/blob/master/CONTRIBUTE.MD)
