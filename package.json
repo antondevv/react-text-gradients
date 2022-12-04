@@ -13,7 +13,6 @@
   },
   "workspaces": [
     "react-text-gradients",
-    "apps/*",
     "examples/*"
   ],
   "devDependencies": {
