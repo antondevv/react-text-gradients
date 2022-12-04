@@ -18,9 +18,6 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Yarn version
-        run: yarn set version stable
-
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
