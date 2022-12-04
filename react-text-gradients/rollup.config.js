@@ -8,7 +8,7 @@ export default {
     {
       file: 'lib/umd/react-text-gradients.umd.min.js',
       format: 'umd',
-      name: 'ReactTextGradient',
+      name: 'ReactTextGradients',
       globals: {
         react: 'React',
       },
