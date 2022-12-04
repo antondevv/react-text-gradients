@@ -25,7 +25,7 @@ jobs:
           cache: "yarn"
 
       - name: Yarn version
-        run: yarn set version latest
+        run: yarn set version stable
 
       - name: Install dependencies
         run: yarn
