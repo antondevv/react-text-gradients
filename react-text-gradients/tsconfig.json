@@ -12,13 +12,8 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "declarationDir": "lib/types",
-    "moduleResolution": "Node"
+    "moduleResolution": "Node",
+    "types": ["node", "jest", "@testing-library/jest-dom"]
   },
-  "exclude": [
-    "node_modules",
-    "lib",
-    "rollup.config.js",
-    "src/**/*.test.ts",
-    "src/**/*.test.tsx"
-  ]
+  "exclude": ["node_modules", "lib", "rollup.config.js"]
 }
