@@ -1,9 +1,9 @@
-# react-text-gradient
+# react-text-gradients
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/antondevv/react-text-gradient/CI?style=flat-square)
-![GitHub](https://img.shields.io/github/license/antondevv/react-text-gradient?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/antondevv/react-text-gradient?style=flat-square)
-![Coveralls](https://img.shields.io/coverallsCoverage/github/antondevv/react-text-gradient?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/antondevv/react-text-gradients/CI?style=flat-square)
+![GitHub](https://img.shields.io/github/license/antondevv/react-text-gradients?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/antondevv/react-text-gradients?style=flat-square)
+![Coveralls](https://img.shields.io/coverallsCoverage/github/antondevv/react-text-gradients?style=flat-square)
 
 A React component for easily making gradient texts in React 🚀
 
@@ -19,7 +19,7 @@ A React component for easily making gradient texts in React 🚀
 ### 🔥 Live demo
 
 <p align="center">
-  <a href="https://react-text-gradient.vercel.app">
+  <a href="https://react-text-gradients.vercel.app">
     <img src="https://user-images.githubusercontent.com/53121683/204915241-2b63e5f4-365a-4eba-a238-ee01d6bef92d.jpg" alt="Demo"  />
   </a>
 </p>
@@ -29,24 +29,24 @@ A React component for easily making gradient texts in React 🚀
 Using npm:
 
 ```
-npm install --save react-text-gradient
+npm install --save react-text-gradients
 ```
 
 using yarn:
 
 ```
-yarn add react-text-gradient
+yarn add react-text-gradients
 ```
 
 using pnpm:
 
 ```
-pnpm add react-text-gradient
+pnpm add react-text-gradients
 ```
 
 # Usage
 
-There are 2 components you can import from `react-text-gradient`.
+There are 2 components you can import from `react-text-gradients`.
 
 Let's go over how each one works:
 
@@ -55,14 +55,14 @@ Let's go over how each one works:
 ### Import component
 
 ```javascript
-import { LinearGradient } from "react-text-gradient"
+import { LinearGradient } from 'react-text-gradients'
 ```
 
 ### Usage
 
 ```javascript
 <h1>
-  <LinearGradient gradient={["to left", "#17acff ,#ff68f0"]}>
+  <LinearGradient gradient={['to left', '#17acff ,#ff68f0']}>
     Text
   </LinearGradient>
 </h1>
@@ -97,14 +97,14 @@ If the browser is incompatible with linear-gradient(), a fallback color can be s
 ### Import component
 
 ```javascript
-import { RadialGradient } from "react-text-gradient"
+import { RadialGradient } from 'react-text-gradients'
 ```
 
 ### Usage
 
 ```javascript
 <h1>
-  <RadialGradient gradient={["#17acff , #ff68f0"]}>Text</RadialGradient>
+  <RadialGradient gradient={['#17acff , #ff68f0']}>Text</RadialGradient>
 </h1>
 ```
 
@@ -135,17 +135,20 @@ If the browser is incompatible with radial-gradient(), a fallback color can be s
 ## Basic usage
 
 ```javascript
-import { LinearGradient as Lg, RadialGradient as Rg } from "react-text-gradient"
+import {
+  LinearGradient as Lg,
+  RadialGradient as Rg,
+} from 'react-text-gradients'
 
 const App = () => {
   return (
     <div className="app">
       <h1 className="h1">
-        <Lg gradient={["to left", "#17acff ,#ff68f0"]}>Text</Lg>
+        <Lg gradient={['to left', '#17acff ,#ff68f0']}>Text</Lg>
       </h1>
 
       <h1 className="h1">
-        <Rg gradient={["#17acff ,#ff68f0"]}>Text</Rg>
+        <Rg gradient={['#17acff ,#ff68f0']}>Text</Rg>
       </h1>
     </div>
   )
@@ -155,7 +158,10 @@ const App = () => {
 ## Complex gradients
 
 ```javascript
-import { LinearGradient as Lg, RadialGradient as Rg } from "react-text-gradient"
+import {
+  LinearGradient as Lg,
+  RadialGradient as Rg,
+} from 'react-text-gradients'
 
 const App = () => {
   return (
@@ -163,8 +169,8 @@ const App = () => {
       <h1 className="h1">
         <Lg
           gradient={[
-            "to left",
-            "90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%",
+            'to left',
+            '90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%',
           ]}
         >
           Text
@@ -174,7 +180,7 @@ const App = () => {
       <h1 className="h1">
         <Rg
           gradient={[
-            "circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%",
+            'circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%',
           ]}
         >
           Text
@@ -188,14 +194,14 @@ const App = () => {
 ## Passing ref & other props
 
 ```javascript
-import { LinearGradient as Lg } from "react-text-gradient"
+import { LinearGradient as Lg } from 'react-text-gradients'
 
 const App = () => {
   return (
     <div className="app">
       <h1 className="h1">
         <Lg
-          gradient={["to left", "#17acff ,#ff68f0"]}
+          gradient={['to left', '#17acff ,#ff68f0']}
           ref={ref}
           className="gradient-title"
           data-testid="gradient-title-element"
@@ -228,7 +234,7 @@ So if you have something like this:
 
 ```javascript
 <h1>
-  <LinearGradient gradient={["to left", "#17acff ,#ff68f0"]}>
+  <LinearGradient gradient={['to left', '#17acff ,#ff68f0']}>
     Text
   </LinearGradient>
 </h1>
@@ -248,4 +254,4 @@ This is what will be generated:
 
 Contributions are always welcome! Please feel free to submit a pull request or to open any issue.
 
-To find out how to setup the development environment etc, go to [CONTRIBUTE.MD](https://github.com/antondevv/react-text-gradient/blob/master/CONTRIBUTE.MD)
+To find out how to setup the development environment etc, go to [CONTRIBUTE.MD](https://github.com/antondevv/react-text-gradients/blob/master/CONTRIBUTE.MD)

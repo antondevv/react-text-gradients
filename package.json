@@ -1,5 +1,5 @@
 {
-  "name": "react-text-gradient",
+  "name": "react-text-gradients",
   "version": "1.0.0",
   "private": true,
   "description": "A React component for easily making gradient texts in React",
@@ -7,12 +7,12 @@
   "author": "Anton Franzen",
   "license": "MIT",
   "scripts": {
-    "lint": "yarn workspace react-text-gradient lint",
-    "build": "yarn workspace react-text-gradient build",
-    "test": "yarn workspace react-text-gradient test:coverage"
+    "lint": "yarn workspace react-text-gradients lint",
+    "build": "yarn workspace react-text-gradients build",
+    "test": "yarn workspace react-text-gradients test:coverage"
   },
   "workspaces": [
-    "react-text-gradient",
+    "react-text-gradients",
     "apps/*",
     "examples/*"
   ],
