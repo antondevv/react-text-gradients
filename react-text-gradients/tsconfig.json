@@ -12,7 +12,8 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "declarationDir": "lib/types",
-    "moduleResolution": "Node"
+    "moduleResolution": "Node",
+    "types": ["@testing-library/jest-dom"]
   },
   "exclude": [
     "node_modules",
