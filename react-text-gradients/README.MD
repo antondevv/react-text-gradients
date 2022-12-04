@@ -1,9 +1,9 @@
 # react-text-gradients
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/antondevv/react-text-gradients/CI?style=flat-square)
-![GitHub](https://img.shields.io/github/license/antondevv/react-text-gradients?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/antondevv/react-text-gradients?style=flat-square)
 ![Coveralls](https://img.shields.io/coverallsCoverage/github/antondevv/react-text-gradients?style=flat-square)
+![GitHub](https://img.shields.io/github/license/antondevv/react-text-gradients?label=license&style=flat-square)
 
 A React library that provides two components for applying **linear** and **radial** gradients to text in React applications 🚀
 
