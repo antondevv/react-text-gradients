@@ -1,5 +1,5 @@
 {
-  "name": "react-text-gradients",
+  "name": "react-text-gradients-monorepo",
   "version": "1.0.0",
   "private": true,
   "description": "A React component for easily making gradient texts in React",
