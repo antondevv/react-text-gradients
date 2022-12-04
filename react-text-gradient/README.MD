@@ -34,7 +34,7 @@ To use `react-text-gradient` in your React application, import the `LinearGradie
 import { LinearGradient } from 'react-text-gradient'
 ```
 
-The `LinearGradient` component can be used to apply a linear gradient to text. It should be used inside a HTML text element, such as an h1 tag. The gradient prop should be an array containing one of the following values: `"to left", "to top left", "to bottom left", "to right", "to top right", "to bottom right", "to top", "to bottom"`. The gradient prop should also contain a string with valid CSS color values, such as `"red, blue"` or `"#ff0000, #0000ff"`.
+The `LinearGradient` component can be used to apply a linear gradient to text. It should be used inside a HTML text element, such as an h1 tag.
 
 ```javascript
 <h1>
@@ -71,7 +71,7 @@ The `gradient` prop is where you specify the direction and colors for the `Linea
 - `to top`
 - `to bottom`
 
-`colors` is a string containing any valid values of [linear-gradient()](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient#formal_syntax)
+`colors` is a string containing any valid values of [linear-gradient()](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient#formal_syntax) such as `"red, blue"` or `"#ff0000, #0000ff"`.
 
 Here is an example of using the `gradient` prop:
 
@@ -100,7 +100,7 @@ Both components also accept an optional `fallbackColor` prop, which specifies a 
 import { RadialGradient } from 'react-text-gradient'
 ```
 
-The `RadialGradient` component can be used to apply a radial gradient to text. It accepts the same props as the LinearGradient component, except that the `gradient` prop should `not` contain any `direction`.
+The `RadialGradient` component can be used to apply a radial gradient to text. It should be used inside a HTML text element, such as an h1 tag. It accepts the same props as the LinearGradient component, except that the `gradient` prop should `not` contain any `direction`.
 
 ```javascript
 <h1>
