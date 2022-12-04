@@ -1,5 +1,5 @@
-const LinearGradient = require("react-text-gradient").LinearGradient
-const RadialGradient = require("react-text-gradient").RadialGradient
+const LinearGradient = require("react-text-gradients").LinearGradient
+const RadialGradient = require("react-text-gradients").RadialGradient
 const React = require("react")
 const App = () => {
   return (

@@ -37,8 +37,8 @@ jobs:
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: ${{ github.workspace }}/react-text-gradient/coverage/lcov.info
-          base-path: ${{ github.workspace }}/react-text-gradient
+          path-to-lcov: ${{ github.workspace }}/react-text-gradients/coverage/lcov.info
+          base-path: ${{ github.workspace }}/react-text-gradients
 
       - name: Build
         run: yarn build
