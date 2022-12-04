@@ -1,1 +1,1 @@
-react-text-gradient/README.MD
+./react-text-gradients/README.MD
