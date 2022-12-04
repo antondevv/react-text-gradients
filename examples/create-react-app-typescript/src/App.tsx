@@ -1,5 +1,8 @@
 import "./App.css"
-import { LinearGradient as Lg, RadialGradient as Rg } from "react-text-gradient"
+import {
+  LinearGradient as Lg,
+  RadialGradient as Rg,
+} from "react-text-gradients"
 
 function App() {
   return (

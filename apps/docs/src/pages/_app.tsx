@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Script
         defer
-        data-domain="react-text-gradient.vercel.app"
+        data-domain="react-text-gradients.vercel.app"
         src="https://plausible.io/js/script.js"
       ></Script>
       <Component {...pageProps} />

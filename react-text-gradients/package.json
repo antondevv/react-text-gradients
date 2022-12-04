@@ -1,9 +1,9 @@
 {
-  "name": "react-text-gradient",
+  "name": "react-text-gradients",
   "version": "1.0.0",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
-  "unpkg": "lib/umd/react-text-gradient.umd.min.js",
+  "unpkg": "lib/umd/react-text-gradients.umd.min.js",
   "types": "lib/types/index.d.ts",
   "author": "Anton Franzen",
   "license": "MIT",
@@ -13,13 +13,13 @@
     "LICENSE.MD",
     "README.MD"
   ],
-  "homepage": "https://react-text-gradient.vercel.app/",
+  "homepage": "https://react-text-gradients.vercel.app/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/antondevv/react-text-gradient.git"
+    "url": "https://github.com/antondevv/react-text-gradients.git"
   },
   "bugs": {
-    "url": "https://github.com/antondevv/react-text-gradient/issues"
+    "url": "https://github.com/antondevv/react-text-gradients/issues"
   },
   "keywords": [
     "react gradient",
