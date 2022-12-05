@@ -20,4 +20,6 @@ You can either run `yarn build` from the root directory, or run `yarn build` fro
 
 ## Branching
 
-There are two branches: master and develop. Create a feature branch if possible, then submit a PR to develop. If everything goes according to plan, develop will be merged into master, and if there are direct changes to `/react-text-gradients` that call for a new release, I will manually create a new release from master.
+There are two branches: master and develop. Create a feature branch, then submit a PR to master if it contains any of the following: A small bug, a small feature, update to the demo website, update to the readme documentaion. If everything goes according to plan, your branch will be merged into master, and if there are direct changes to `/react-text-gradients` that call for a new release, I will manually create a new release from master.
+
+Now, if it's massive change like breaking changes, then please submit a PR to develop.
