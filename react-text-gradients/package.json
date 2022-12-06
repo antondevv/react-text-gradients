@@ -1,7 +1,7 @@
 {
   "name": "react-text-gradients",
   "description": "A React library that provides two components for applying linear and radial gradients to text in React applications 🚀",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "unpkg": "lib/umd/react-text-gradients.umd.min.js",
