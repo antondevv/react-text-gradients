@@ -5,7 +5,7 @@ import { Nav } from "../components/Nav"
 import styles from "../styles/Home.module.css"
 // @ts-ignore
 import ghIcon from "../../public/gh.svg"
-import imagePreview from "../../public/demo-usage.png"
+import imagePreview from "../../public/c-prev.png"
 import { LinearGradient } from "react-text-gradients"
 
 export default function Home() {
