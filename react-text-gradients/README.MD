@@ -229,6 +229,39 @@ const App = () => {
 }
 ```
 
+## CDN usage
+
+```javascript
+  <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react-text-gradients@latest/lib/umd/react-text-gradients.umd.min.js"></script>
+    <script type="text/babel">
+      const { LinearGradient } = ReactTextGradients
+      const { createRoot } = ReactDOM
+      const container = document.getElementById("root")
+      const root = createRoot(container)
+
+      root.render(
+        <LinearGradient
+          style={{ fontSize: "50px" }}
+          gradient={[
+            "to left",
+            "#17acff 23.45%, #ff68f0 73.52%, rgba(201, 68, 100, 0.7) 120.73%",
+          ]}
+        >
+          Linear Gradient
+        </LinearGradient>
+      )
+    </script>
+```
+
 # How it works
 
 The `LinearGradient` & `RadialGradient` component returns a `span` element with a style` attribute applied to it with valid CSS.
