@@ -11,6 +11,7 @@ A React library that provides two components for applying **linear** and **radia
 
 - 🔥 **Written 100% in TypeScript**
 - 💅 **Fully customizable colors through props**
+- 💥 **Linear & Radial gradient component**
 - 🥷 **Supports ESM, CJS & UMD**
 - ⚙️ **Supports tree shaking**
 - ⚡ **Lightweight ~ 500 bytes/component**
