@@ -21,7 +21,7 @@ A React library that provides two components for applying **linear** and **radia
 
 <p align="center">
   <a href="https://react-text-gradients.vercel.app">
-    <img src="https://user-images.githubusercontent.com/53121683/204915241-2b63e5f4-365a-4eba-a238-ee01d6bef92d.jpg" alt="Demo"  />
+    <img src="https://user-images.githubusercontent.com/53121683/206046350-a57d7f40-53cf-4e7e-9c9d-d30cd06416dc.png" alt="Demo"  />
   </a>
 </p>
 
