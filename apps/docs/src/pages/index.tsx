@@ -5,7 +5,7 @@ import { Nav } from "../components/Nav"
 import styles from "../styles/Home.module.css"
 // @ts-ignore
 import ghIcon from "../../public/gh.svg"
-import imagePreview from "../../public/LG3.png"
+import imagePreview from "../../public/demo-usage.png"
 import { LinearGradient } from "react-text-gradients"
 
 export default function Home() {
@@ -49,6 +49,11 @@ export default function Home() {
                         <p className={styles.featureText}>
                           🔥 Written 100% in TypeScript
                         </p>
+                        <div className={styles.onlyMobile}>
+                          <p className={styles.featureText}>
+                            🥷 Linear & Radial gradient component
+                          </p>
+                        </div>
                         <p className={styles.featureText}>
                           💅 Fully customize colors by props
                         </p>
