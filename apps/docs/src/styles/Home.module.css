@@ -136,6 +136,9 @@
 }
 
 @media (min-width: 900px) {
+  .onlyMobile {
+    display: none;
+  }
   .flex {
     display: flex;
     align-items: center;
