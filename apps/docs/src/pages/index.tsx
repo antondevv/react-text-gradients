@@ -51,7 +51,7 @@ export default function Home() {
                         </p>
                         <div className={styles.onlyMobile}>
                           <p className={styles.featureText}>
-                            🥷 Linear & Radial gradient component
+                            💥 Linear & Radial gradient component
                           </p>
                         </div>
                         <p className={styles.featureText}>
